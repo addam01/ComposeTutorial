@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
+import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
@@ -37,13 +38,13 @@ fun <T> MutableStateFlow<T>.collectAsMutableState(
 )
 
 //Livedata
-//@Composable
-//fun <T> MutableLiveData<T>.observeAsMutableState(
-//    initialValue: T
-//): MutableState<T> = MutableStateAdapter(
-//    state = observeAsMutableState(initialValue),
-//    mutate = { postValue(it) }
-//)
+@Composable
+fun <T> MutableLiveData<T>.observeAsMutableState(
+    initialValue: T
+): MutableState<T> = MutableStateAdapter(
+    state = observeAsMutableState(initialValue),
+    mutate = { postValue(it) }
+)
 
 // RxJava 2/3
 //@Composable
