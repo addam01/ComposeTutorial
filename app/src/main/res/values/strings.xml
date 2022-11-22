@@ -8,4 +8,6 @@
     <string name="password_hint">Please enter your password</string>
     <string name="login">Login</string>
     <string name="title_activity_employee">EmployeeActivity</string>
+    <string name="login_form">Simple Login Form</string>
+    <string name="post_api">Posts API via Hilt</string>
 </resources>
